@@ -16,5 +16,4 @@ public class ReplaceAlll {
 	}
 	
 }
-// needs to have methods in seperate file
 	
