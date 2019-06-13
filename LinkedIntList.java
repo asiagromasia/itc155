@@ -3,15 +3,19 @@
 public class LinkedIntList{
 	private static ListNode front; //first value in the list
 	private int data;
-	//private int data;
-//	private int next;
 	private int next;
 	
 	//construct an empty list
 	public LinkedIntList() {
 		front = null;
 	}
-	
+	/*
+	 public class ListNode{
+	 
+		public int data;
+		public ListNode next;
+	}
+	*/
 	//append a value to the end of the list
 	public void add(int value) {
 		if(front == null) {
@@ -24,6 +28,7 @@ public class LinkedIntList{
 		current.next = new ListNode(value);
 	}
 	}
+	
 	public int size() {
 		int count = 0;
 		ListNode current = front;
@@ -83,29 +88,28 @@ public class LinkedIntList{
 		
 	}
 
-//
+	
+	
 	public boolean isSorted() {
-		//for (int i = 0; i < list.size(); i++) {
+		if(front == null) {
+			return true;
+		} else {
+		
 		//following is same as int i=0;
 		ListNode current = front;
-		while (current != null) {
-			int value = 0;
-			//if (current.data <= current.next.data || (front == null)) {
-			if (front == null || (current.data < value )) {
-					System.out.print("true");
-					current = current.next;
-					return true;
-					//current = current.next;
-					
-				}else 
-					System.out.print("false");
-				return false;
-		} 
-	//	System.out.print("false");
-		return false;
-	
+		while (current.next != null ) {
+		//	int value = 0;
 		
-	}
+			if (current.data > current.next.data ) {
+			//	System.out.println("false");
+				return false;
+				} 
+			current = current.next;
+			}
+		}
+	//	System.out.println("true");
+		return true;
 
+	}
 	
-};
+}

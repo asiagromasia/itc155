@@ -12,16 +12,14 @@ public class SortLinkedIntLis {
 		 
 	        list.add(18);
 	        list.add(20);
-	       list.add(23);
+	       list.add(80);
 	        list.add(44);
 	        list.add(51);
 	        
 	        System.out.println(list);
-	        System.out.println("Size "+ list.size());
-	      //  list.add(51);
-	        System.out.println(list);
-	        list.isSorted();
-	     //   LinkedIntList.isSorted(list);
+	       // list.isSorted(); instead of addint print out statements in method do following
+	       // LinkedIntList.isSorted(list);
+	        System.out.println(list.isSorted());
 	       
 		
 	}
